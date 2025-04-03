@@ -19,6 +19,7 @@
       <link rel="stylesheet" href="assets/css/default.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/responsive.css">
+      <link rel="stylesheet" href="assets/css/ai-chat.css">
       <style>
          
       </style>
@@ -212,6 +213,19 @@
                        
 
                      </aside>
+
+                     <!-- Блок фильтров уже есть выше, добавляем виджет чата под ними -->
+                     <div id="ai-chat-container" style="margin-top:20px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                       <h3>ИИ Помощник по чаю</h3>
+                       <div id="chat-window" style="height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px; background: #f9f9f9;">
+                         <!-- Здесь будет выводиться история переписки -->
+                       </div>
+                       <form id="chat-form" style="margin-top:10px;">
+                         <input type="text" id="chat-input" placeholder="Напишите сообщение..." style="width:80%; padding:5px;">
+                         <button type="submit" style="padding:5px 10px;">Отправить</button>
+                       </form>
+                     </div>
+
                   </div>
                   <div class="col-xl-9 col-lg-8 col-md-12 col-sm-8 shop-sidebar-pad order-first">
                      <div class="shop-top-wrap">
@@ -616,5 +630,7 @@ loadCart();
 });
 
       </script>
+      <script src="assets/js/secret.js"></script>
+      <script src="assets/js/ai-chat.js"></script>
    </body>
 </html>

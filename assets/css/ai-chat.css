@@ -1,0 +1,40 @@
+#ai-chat-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+#chat-window {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.user-message {
+  background-color: #e6f7ff;
+  text-align: right;
+}
+
+.ai-message {
+  background-color: #fff7e6;
+  text-align: left;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  text-align: left;
+  color: #d8000c;
+}
