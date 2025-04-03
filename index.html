@@ -1,0 +1,565 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Infinity Life</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/default.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+
+        <!-- Pre-loader-start -->
+        <div id="preloader">
+            <div class="tg-cube-grid">
+                <div class="tg-cube tg-cube1"></div>
+                <div class="tg-cube tg-cube2"></div>
+                <div class="tg-cube tg-cube3"></div>
+                <div class="tg-cube tg-cube4"></div>
+                <div class="tg-cube tg-cube5"></div>
+                <div class="tg-cube tg-cube6"></div>
+                <div class="tg-cube tg-cube7"></div>
+                <div class="tg-cube tg-cube8"></div>
+                <div class="tg-cube tg-cube9"></div>
+            </div>
+        </div>
+        <!-- Pre-loader-end -->
+
+		<!-- Scroll-top -->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <!-- Scroll-top-end-->
+
+        <!-- header-area -->
+        <header id="home">
+            <div id="header-top-fixed"></div>
+            <div id="sticky-header" class="menu-area">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
+                            <div class="menu-wrap">
+                                <nav class="menu-nav">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    </div>
+                                    <div class="navbar-wrap main-menu d-none d-xl-flex">
+                                        <ul class="navigation">
+                                            <li class="active menu-item-has-children"><a href="#home" class="section-link">Главная</a>
+                                            </li>
+                                            <li><a href="#features" class="section-link">Свойства</a></li>
+                                            <li><a href="#paroller" class="section-link">Продукты</a></li>
+                                            <li><a href="#ingredient" class="section-link">Ингредиенты</a></li>
+                                            <li class="menu-item-has-children"><a href="shop.html">Магазин</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop.html">Наш Магазин</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-action d-none d-sm-block">
+                                        <ul>
+                                            <li class="header-shop-cart">
+                                                <a href="#" class="cart-count"><i class="flaticon-shopping-cart"></i>
+                                                    <span class="mini-cart-count" id="cart-item-count">0</span> <!-- Изначально 0 товаров -->
+                                                </a>
+                                                <div class="header-mini-cart">
+                                                    <ul class="woocommerce-mini-cart cart_list product_list_widget list-wrap" id="cart-items-list">
+                                                        <!-- Товары будут добавляться сюда -->
+                                                    </ul>
+                                                    <p class="woocommerce-mini-cart__total">
+                                                        <strong>Общая стоимость:</strong>
+                                                        <span class="woocommerce-Price-amount" id="total-price">0 руб.</span> <!-- Изначально 0 -->
+                                                    </p>
+                                                    <p class="woocommerce-mini-cart__total">
+                                                        <strong>Общая калорийность:</strong>
+                                                        <span id="total-calories">0 кал.</span> <!-- Изначально 0 -->
+                                                    </p>
+                                                    <p class="checkout-link">
+                                                        <a class="button checkout wc-forward">Оформить заказ</a>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+                                            <li class="offCanvas-btn d-none d-xl-block"><a href="#" class="navSidebar-button"><i class="flaticon-layout"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- Mobile Menu  -->
+                            <div class="mobile-menu">
+                                <nav class="menu-box">
+                                    <div class="close-btn"><i class="fas fa-times"></i></div>
+                                    <div class="nav-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="menu-outer">
+                                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                    </div>
+                                    <div class="social-links">
+                                        <ul class="clearfix">
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="menu-backdrop"></div>
+                            <!-- End Mobile Menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- header-search -->
+            <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="search-wrap text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="search-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Введите искомое слово...">
+                                        <button class="search-btn"><i class="flaticon-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-backdrop"></div>
+            <!-- header-search-end -->
+
+            <!-- offCanvas-start -->
+            <div class="offCanvas-wrap">
+                <div class="offCanvas-toggle"><img src="assets/img/icons/close.png" alt="icon"></div>
+                <div class="offCanvas-body">
+                    <div class="offCanvas-content">
+                        <h3 class="title">все сможем<span> вместе</span></h3>
+                        <p>С нашими продуктами вы сможете продлить свою молодость и избавиться от лишнего веса, что поможет вам стать более уверенным в себе.</p>
+                    </div>
+                    <div class="offcanvas-contact">
+                        <h4 class="number">+7(999) 999 99-99</h4>
+                        <h4 class="email">infinity@mail.ru</h4>
+                        <p>Бирюлево Восточное<br>Москва, Россия</p>
+                        <ul class="offcanvas-social list-wrap">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="offCanvas-overlay"></div>
+            <!-- offCanvas-end -->
+
+        </header>
+        <!-- header-area-end -->
+
+
+        <!-- main-area -->
+        <main class="main-area fix">
+
+            <!-- banner-area -->
+            <section class="banner-area">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-8 col-xl-7 col-lg-8 col-md-10">
+                            <div class="banner-content text-center">
+                                <p class="banner-caption">.. питание будущего ..</p>
+                                <h2 class="title">Бесконечная жизнь</h2>
+                                <a href="shop.html" class="btn btn-two">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="banner-images text-center">
+                                <img src="assets/img/banner/banner_img01.png" alt="img" class="main-img">
+                                <img src="assets/img/banner/banner_round_bg.png" alt="img" class="bg-shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-shape one">
+                    <img src="assets/img/banner/banner_shape01.png" alt="shape" class="wow bannerFadeInLeft" data-wow-delay=".2s" data-wow-duration="2s">
+                </div>
+                <div class="banner-shape two">
+                    <img src="assets/img/banner/banner_shape02.png" alt="shape" class="wow bannerFadeInRight" data-wow-delay=".2s" data-wow-duration="2s">
+                </div>
+                <div class="banner-shape three">
+                    <img src="assets/img/banner/banner_shape03.png" alt="shape" class="wow bannerFadeInDown" data-wow-delay=".2s" data-wow-duration="2s">
+                </div>
+                <div class="banner-shape four">
+                    <img src="assets/img/banner/banner_shape04.png" alt="shape" class="wow bannerFadeInDown" data-wow-delay=".2s" data-wow-duration="2s">
+                </div>
+            </section>
+            <!-- banner-area-end -->
+
+           
+
+            <!-- features-area -->
+            <section id="features" class="features-area features-bg" data-background="assets/img/bg/features_bg.jpg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-6 col-lg-5 order-0 order-lg-2">
+                            <div class="features-img wow featuresRollOut" data-wow-delay=".3s">
+                                <img src="assets/img/others/features_img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-lg-7">
+                            <div class="features-items-wrap">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="features-item">
+                                            <div class="features-icon">
+                                                <i class="flaticon-tape-measure"></i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4 class="title">Полезные и вкусные</h4>
+                                                <p>В нашей линейке очень полезные продукты питания исключительно из натуральных продуктов.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="features-item">
+                                            <div class="features-icon">
+                                                <i class="flaticon-test"></i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4 class="title">Добавление чего-то необычного</h4>
+                                                <p>Мы добавляем в свои чаи коллоидное золото, серебро и наночастицы платины.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="features-item">
+                                            <div class="features-icon">
+                                                <i class="flaticon-weight"></i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4 class="title">Для всего</h4>
+                                                <p>Подходит для ежедневного потребления на работе, также с нами вы можете попробовать вкус иностранной кухни.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="features-item">
+                                            <div class="features-icon">
+                                                <i class="flaticon-abs"></i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4 class="title">Правильное питание с нами</h4>
+                                                <p>С помощью наших продуктов вы сможете избавиться от лишнего веса, так как они ускоряют метаболизм и обмен веществ.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- features-area-end -->
+
+            <!-- features-product -->
+            <section id="paroller" class="features-products">
+                <div class="container">
+                    <div class="features-products-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="features-products-thumb">
+                                    <div class="main-img">
+                                        <img src="assets/img/products/features_product01.png" alt="img">
+                                    </div>
+                                    <img src="assets/img/products/features_product_shape01.png" alt="img" class="shape-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-10">
+                                <div class="features-product-content">
+                                    <h2 class="title">Чай пуэр с коллоидным золотом </h2>
+                                    <h6 class="features-product-quantity"> </h6>
+                                    <p>Главной отличительной чертой пуэра является стадия ферментации, которая может длится долго, как у вина, при этом микроорганизмы заметно меняют химический состав и вкусовые качества чая. В чай добавлены наночастицы золота, сегодня золото применяется в лечении ревматоидного артрита и других тяжелых аутоиммунных заболеваний, а также в медицинской диагностике в качестве контрастирующего агента.</p>
+                                    <div class="features-product-bottom">
+                                        <a href="shop.html" class="btn">Купить</a>
+                                        <span class="price">200 руб.<span class="old-price">279 руб.</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-products-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="features-products-thumb">
+                                    <div class="main-img">
+                                        <img src="assets/img/products/features_product02.png" alt="img">
+                                    </div>
+                                    <img src="assets/img/products/features_product_shape02.png" alt="img" class="shape-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-10">
+                                <div class="features-product-content">
+                                    <h2 class="title">Ганпаудер с наночастицами серебра</h2>
+                                    <h6 class="features-product-quantity"></h6>
+                                    <p>Ганпаудер имеет высокую концентрацию антиоксидантов, содержит полифенолы, которые нужны в борьбе с инфекциями и укреплению иммунных функций, улучшает функцию сосудов - укрепляет сердце.  В чай добавлены наночастицы серебра, действие коллоидного  раствора основывается на механизме блокировки дыхательной цепи бактерий, то есть микроорганизмы становятся  нежизнеспособными и не могут размножаться.</p>
+                                    <div class="features-product-bottom">
+                                        <a href="shop.html" class="btn">Купить</a>
+                                        <span class="price">165 руб. <span class="old-price">200 руб.</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-products-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="features-products-thumb">
+                                    <div class="main-img">
+                                        <img src="assets/img/products/features_product03.png" alt="img">
+                                    </div>
+                                    <img src="assets/img/products/features_product_shape03.png" alt="img" class="shape-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-10">
+                                <div class="features-product-content">
+                                    <h2 class="title">Трава бессмертия с наночастицами платины</h2>
+                                    <h6 class="features-product-quantity"></h6>
+                                    <p>Этот напиток помогает сбросить лишний вес, стимулирует регенерацию клеток печени, противостоит онкозаболеваниям. Мы добавили в наш чай наночастицы платины, наночастицы платины обладают выраженными омолаживающими и восстанавливающими свойствами.</p>
+                                    <div class="features-product-bottom">
+                                        <a href="shop.html" class="btn">Купить</a>
+                                        <span class="price">195 руб.<span class="old-price">249 руб.</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fp-shapes-wrap">
+                    <div class="fp-shape-one">
+                        <img src="assets/img/others/features_sec_shape01.png" alt="shape" class="paroller" data-paroller-factor="0.25" data-paroller-factor-lg="0.20" data-paroller-factor-md="0.25" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="vertical">
+                    </div>
+                    <div class="fp-shape-two">
+                        <img src="assets/img/others/features_sec_shape02.png" alt="shape" class="paroller" data-paroller-factor="-0.25" data-paroller-factor-lg="0.20" data-paroller-factor-md="0.25" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="vertical">
+                    </div>
+                    <div class="fp-shape-three">
+                        <img src="assets/img/others/features_sec_shape03.png" alt="shape" class="paroller" data-paroller-factor="0.25" data-paroller-factor-lg="0.20" data-paroller-factor-md="0.25" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="vertical">
+                    </div>
+                </div>
+                <div class="fp-circle one"></div>
+                <div class="fp-circle two"></div>
+                <div class="fp-circle three"></div>
+                <div class="fp-circle four"></div>
+                <div class="fp-circle five"></div>
+            </section>
+            <!-- features-product-end -->
+
+
+            <!-- Ingredients-area -->
+            <section id="ingredient" class="ingredients-area">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-5 col-lg-6 col-md-7">
+                            <div class="ingredients-img">
+                                <img src="assets/img/others/ingredients_img.png" alt="img">
+                                <img src="assets/img/others/ingredients_shape.png" alt="img" class="shape">
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-9">
+                            <div class="ingredients-items-wrap">
+                                <div class="section-title mb-60">
+                                    <p class="sub-title">увеличивайте энергию с Infinity</p>
+                                    <h2 class="title">Наши Ингредиенты</h2>
+                                </div>
+                                <div class="row justify-content-center justify-content-lg-start">
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="ingredients-item wow fadeInUp" data-wow-delay=".2s">
+                                            <div class="ingredients-thumb">
+                                                <img src="assets/img/others/ingredients_item01.png" alt="img">
+                                            </div>
+                                            <div class="ingredients-content">
+                                                <h5 class="title">Помогает с диетой </h5>
+                                                <p>Наши блюда ускоряют обмен веществ и метаболизм, вам будет легче сбросить лишний вес.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="ingredients-item wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="ingredients-thumb">
+                                                <img src="assets/img/others/ingredients_item02.png" alt="img">
+                                            </div>
+                                            <div class="ingredients-content">
+                                                <h5 class="title">Все самое нужное</h5>
+                                                <p>В наших блюдах все необходимое для рациона человека, от овощей до курицы и морепродуктов.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="ingredients-item wow fadeInUp" data-wow-delay=".4s">
+                                            <div class="ingredients-thumb">
+                                                <img src="assets/img/others/ingredients_item03.png" alt="img">
+                                            </div>
+                                            <div class="ingredients-content">
+                                                <h5 class="title">Питание для вашего тела</h5>
+                                                <p>В блюдах содержится много белка и сложных углеводов, дающее много энергии на долгое время.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="ingredients-item wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="ingredients-thumb">
+                                                <img src="assets/img/others/ingredients_item04.png" alt="img">
+                                            </div>
+                                            <div class="ingredients-content">
+                                                <h5 class="title">Нанотехнологии</h5>
+                                                <p>Мы используем наночастицы с полезными свойствами, при этом не имеем аналогов на рынке.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Ingredients-area-end -->
+<!-- shop-script -->
+<script>
+    // Массив для хранения данных о товарах в корзине
+    let cart = [];
+    
+    // Элементы для отображения стоимости и калорийности в корзине
+    const cartItemCount = document.getElementById("cart-item-count");
+    const totalPriceElement = document.getElementById("total-price");
+    const totalCaloriesElement = document.getElementById("total-calories");
+    const cartItemsList = document.getElementById("cart-items-list");
+    
+    // Функция для обновления корзины
+    function updateCart() {
+        cartItemCount.textContent = cart.length;
+    
+        let totalPrice = 0;
+        let totalCalories = 0;
+        
+        cartItemsList.innerHTML = '';
+    
+        cart.forEach(item => {
+            totalPrice += item.price * item.quantity;
+            totalCalories += item.calories * item.quantity;
+    
+            const cartItem = document.createElement('li');
+            cartItem.classList.add('woocommerce-mini-cart-item', 'd-flex', 'align-items-center');
+            
+            cartItem.innerHTML = `
+                <a href="#" class="remove remove_from_cart_button" data-id="${item.id}">×</a>
+                <div class="mini-cart-img">
+                    <img src="${item.image}" alt="${item.title}">
+                </div>
+                <div class="mini-cart-content">
+                    <h4 class="product-title"><a href="shop-details.html">${item.title}</a></h4>
+                    <div class="mini-cart-price">${item.quantity} × 
+                        <span class="woocommerce-Price-amount amount">${item.price} руб.</span>
+                    </div>
+                    <p class="product-calories">Калорийность: <span>${item.calories} кал.</span></p>
+                </div>
+            `;
+    
+            cartItemsList.appendChild(cartItem);
+        });
+    
+        totalPriceElement.textContent = `${totalPrice} руб.`;
+        totalCaloriesElement.textContent = `${totalCalories} кал.`;
+    
+        // Сохраняем корзину в localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    
+    // Функция для загрузки корзины из localStorage
+    function loadCart() {
+        const savedCart = localStorage.getItem("cart");
+        if (savedCart) {
+            cart = JSON.parse(savedCart);
+            updateCart();
+        }
+    }
+    
+    // Функция для добавления товара в корзину
+    function addToCart(id, title, price, calories, image) {
+        const existingItem = cart.find(item => item.id === id);
+        
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ id, title, price, calories, image, quantity: 1 });
+        }
+    
+        updateCart();
+    }
+    
+    // Обработчик событий для добавления товара в корзину
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+    
+            const id = button.getAttribute('data-id');
+            const title = button.getAttribute('data-title');
+            const price = parseInt(button.getAttribute('data-price'));
+            const calories = parseInt(button.getAttribute('data-calories'));
+            const image = button.getAttribute('data-image');
+    
+            addToCart(id, title, price, calories, image);
+        });
+    });
+    
+    // Функция для удаления товара из корзины
+    function removeFromCart(id) {
+        cart = cart.filter(item => item.id !== id);
+        updateCart();
+    }
+    
+    // Обработчик для удаления товара из корзины
+    cartItemsList.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('remove_from_cart_button')) {
+            const id = e.target.getAttribute('data-id');
+            removeFromCart(id);
+        }
+    });
+    
+    // Загружаем корзину при загрузке страницы
+    loadCart();
+    
+    
+     </script>
+
+		<!-- JS here -->
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/jquery.paroller.min.js"></script>
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/jquery.inview.min.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jarallax.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/validator.js"></script>
+        <script src="assets/js/ajax-form.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

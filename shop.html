@@ -1,0 +1,620 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Infinity Life</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+      <!-- Place favicon.ico in the root directory -->
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+      <link rel="stylesheet" href="assets/css/flaticon.css">
+      <link rel="stylesheet" href="assets/css/jquery-ui.css">
+      <link rel="stylesheet" href="assets/css/slick.css">
+      <link rel="stylesheet" href="assets/css/default.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <style>
+         
+      </style>
+   </head>
+   <body>
+      <!-- Pre-loader-start -->
+      <div id="preloader">
+         <div class="tg-cube-grid">
+            <div class="tg-cube tg-cube1"></div>
+            <div class="tg-cube tg-cube2"></div>
+            <div class="tg-cube tg-cube3"></div>
+            <div class="tg-cube tg-cube4"></div>
+            <div class="tg-cube tg-cube5"></div>
+            <div class="tg-cube tg-cube6"></div>
+            <div class="tg-cube tg-cube7"></div>
+            <div class="tg-cube tg-cube8"></div>
+            <div class="tg-cube tg-cube9"></div>
+         </div>
+      </div>
+      <!-- Pre-loader-end -->
+      <!-- Scroll-top -->
+      <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="fas fa-angle-up"></i>
+      </button>
+      <!-- Scroll-top-end-->
+      <!-- header-area -->
+      <header id="home">
+         <div id="sticky-header" class="menu-area transparent-header">
+            <div class="container custom-container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
+                     <div class="menu-wrap">
+                        <nav class="menu-nav">
+                           <div class="logo">
+                              <a href="index.html">
+                              <img src="assets/img/logo/white_logo.png" alt="Logo" class="main-logo">
+                              <img src="assets/img/logo/logo.png" alt="Logo" class="secondary-logo">
+                              </a>
+                           </div>
+                           <div class="navbar-wrap main-menu d-none d-xl-flex">
+                              <ul class="navigation">
+                                 <li><a href="index.html#home">Главная</a></li>
+                                 <li><a href="index.html#features">Свойства</a></li>
+                                 <li><a href="index.html#paroller">Продукты</a></li>
+                                 <li><a href="index.html#ingredient">Ингредиенты</a></li>
+                                 <li class="menu-item-has-children active">
+                                    <a href="shop.html">Магазин</a>
+                                    <ul class="sub-menu">
+                                       <li class="active"><a href="shop.html">Наш Магазин</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="header-action d-none d-sm-block">
+                              <ul>
+                                <li class="header-shop-cart">
+                                    <a href="#" class="cart-count"><i class="flaticon-shopping-cart"></i>
+                                        <span class="mini-cart-count" id="cart-item-count">0</span> <!-- Изначально 0 товаров -->
+                                    </a>
+                                    <div class="header-mini-cart">
+                                        <ul class="woocommerce-mini-cart cart_list product_list_widget list-wrap" id="cart-items-list">
+                                            <!-- Товары будут добавляться сюда -->
+                                        </ul>
+                                        <p class="woocommerce-mini-cart__total">
+                                            <strong>Общая стоимость:</strong>
+                                            <span class="woocommerce-Price-amount" id="total-price">0 руб.</span> <!-- Изначально 0 -->
+                                        </p>
+                                        <p class="woocommerce-mini-cart__total">
+                                            <strong>Общая калорийность:</strong>
+                                            <span id="total-calories">0 кал.</span> <!-- Изначально 0 -->
+                                        </p>
+                                        <p class="checkout-link">
+                                            <a href="shop-details.html" class="button checkout wc-forward">Оформить заказ</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                
+                                 <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+                                 <li class="offCanvas-btn d-none d-xl-block"><a href="#" class="navSidebar-button"><i class="flaticon-layout"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                     <!-- Mobile Menu  -->
+                     <div class="mobile-menu">
+                        <nav class="menu-box">
+                           <div class="close-btn"><i class="fas fa-times"></i></div>
+                           <div class="nav-logo">
+                              <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                           </div>
+                           <div class="menu-outer">
+                              <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                           </div>
+                           <div class="social-links">
+                              <ul class="clearfix">
+                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                     <div class="menu-backdrop"></div>
+                     <!-- End Mobile Menu -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header-search -->
+         <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="search-wrap text-center">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="search-form">
+                           <form action="#">
+                              <input type="text" placeholder="Введите искомое слово...">
+                              <button class="search-btn"><i class="flaticon-search"></i></button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="search-backdrop"></div>
+         <!-- header-search-end -->
+         <!-- offCanvas-start -->
+         <div class="offCanvas-wrap">
+            <div class="offCanvas-toggle"><img src="assets/img/icons/close.png" alt="icon"></div>
+            <div class="offCanvas-body">
+               <div class="offCanvas-content">
+                  <h3 class="title">все сможем<span> вместе</span></h3>
+                  <p>С нашими продуктами вы сможите продлить свою молодость и избавиться от лишнего веса что поможет вам стать более уверенным в себе.</p>
+               </div>
+               <div class="offcanvas-contact">
+                  <h4 class="number">+9 (999) 999 99-99</h4>
+                  <h4 class="email">infinity@mail.ru</h4>
+                  <p>Бирюлево Восточное <br>Москва, Россия</p>
+                  <ul class="offcanvas-social list-wrap">
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="offCanvas-overlay"></div>
+         <!-- offCanvas-end -->
+      </header>
+      <!-- header-area-end -->
+      <!-- main-area -->
+      <main class="main-area fix">
+         <!-- breadcrumb-area -->
+         <section class="breadcrumb-area breadcrumb-bg">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-xl-10">
+                     <div class="breadcrumb-content text-center">
+                        <h2 class="title">Наш Магазин</h2>
+                        <nav aria-label="Breadcrumbs" class="breadcrumb-trail">
+                           <ul class="breadcrumb">
+                              <li class="breadcrumb-item trail-item trail-begin">
+                                 <a href="index.html"><span>Главная</span></a>
+                              </li>
+                              <li class="breadcrumb-item trail-item trail-end"><span>Наш Магазин</span></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="video-shape one"><img src="assets/img/others/video_shape01.png" alt="shape"></div>
+            <div class="video-shape two"><img src="assets/img/others/video_shape02.png" alt="shape"></div>
+         </section>
+         <!-- breadcrumb-area-end -->
+         <div class="inner-shop-area">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-xl-3 col-lg-4 col-md-8 col-sm-8">
+                     <aside class="shop-sidebar">
+                        <select id="filter-category">
+                           <option value="all">Все</option>
+                           <option value="чай">Чай</option>
+                           <option value="еда">Еда</option>
+                       </select>
+                       
+                       <input type="number" id="filter-price" placeholder="Макс. цена">
+                       <input type="number" id="filter-calories" placeholder="Макс. калорийность">
+                       
+
+                     </aside>
+                  </div>
+                  <div class="col-xl-9 col-lg-8 col-md-12 col-sm-8 shop-sidebar-pad order-first">
+                     <div class="shop-top-wrap">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="shop-top-left">
+                                 <p class="woocommerce-result-count shop-show-result">Показано 6 товаров</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="suxnix-shop-product-main">
+                        <div class="row">
+                            <!-- товар 1 -->
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                <div class="home-shop-item inner-shop-item" data-category="чай">
+                                    <div class="home-shop-thumb">
+                                            <img src="assets/img/products/home_shop_thumb01.png" alt="img">
+                                            <span class="discount"> -15%</span>
+                                        </a>
+                                    </div>
+                                    <div class="home-shop-content">
+                                        <h4 class="title"><a >Чай пуэр с коллоидным золотом</a></h4>
+                                        <span class="home-shop-price" data-price="200" data-calories="35">200 руб.</span> <!-- Добавлены data-атрибуты для цены и калорийности -->
+                                        <p class="product-calories">Калорийность: <span id="calories-1">35 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                        <div class="home-shop-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="total-rating">(20)</span>
+                                        </div>
+                                        <div class="shop-content-bottom">
+                                            <a href="#" class="cart add-to-cart" data-id="1" data-title="Чай пуэр с коллоидным золотом" data-price="200" data-calories="35" data-image="assets/img/products/home_shop_thumb01.png">
+                                                <i class="flaticon-shopping-cart-1"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-two">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           <!-- товар 2 -->
+                           <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="home-shop-item inner-shop-item" data-category="чай">
+                                 <div class="home-shop-thumb">
+                                    <img src="assets/img/products/home_shop_thumb02.png" alt="img">
+                                    </a>
+                                 </div>
+                                 <div class="home-shop-content">
+                                    <h4 class="title"><a >Ганпаудер с нано частицами серебра</a></h4>
+                                    <span class="home-shop-price" data-price="165" data-calories="35">165 руб.</span>
+                                    <p class="product-calories">Калорийность: <span id="calories-2">35 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                    <div class="home-shop-rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star-half-alt"></i>
+                                       <span class="total-rating">(34)</span>
+                                    </div>
+                                    <div class="shop-content-bottom">
+                                       <a href="#" class="cart add-to-cart" data-id="2" data-title="Ганпаудер с нано частицами серебра" data-price="165" data-calories="35" data-image="assets/img/products/home_shop_thumb02.png"><i class="flaticon-shopping-cart-1"></i></a>
+                                       <a href="#" class="btn btn-two">Купить</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- товар 3 -->
+                           <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="home-shop-item inner-shop-item" data-category="чай">
+                                 <div class="home-shop-thumb">
+                                    <img src="assets/img/products/home_shop_thumb03.png" alt="img">
+                                    <span class="discount"> -15%</span>
+                                    </a>
+                                 </div>
+                                 <div class="home-shop-content">
+                                    <h4 class="title"><a >Трава бессмертия с платиной </a></h4>
+                                    <span class="home-shop-price" data-price="195" data-calories="35">195 руб.</span>
+                                    <p class="product-calories">Калорийность: <span id="calories-3">35 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                    <div class="home-shop-rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star-half-alt"></i>
+                                       <span class="total-rating">(19)</span>
+                                    </div>
+                                    <div class="shop-content-bottom">
+                                       <a href="#" class="cart add-to-cart" data-id="3" data-title="Трава бессмертия с платиной" data-price="195" data-calories="35" data-image="assets/img/products/home_shop_thumb03.png"><i class="flaticon-shopping-cart-1"></i></a>
+                                       <a href="#" class="btn btn-two">Купить</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- товар 4 -->
+                           <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="home-shop-item inner-shop-item" data-category="еда">
+                                 <div class="home-shop-thumb">
+                                    <img src="assets/img/products/home_shop_thumb04.png" alt="img">
+                                    </a>
+                                 </div>
+                                 <div class="home-shop-content">
+                                    <h4 class="title"><a >Суп том ям</a></h4>
+                                    <span class="home-shop-price" data-price="529" data-calories="460">529 руб.</span>
+                                    <p class="product-calories">Калорийность: <span id="calories-4">460 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                    <div class="home-shop-rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star-half-alt"></i>
+                                       <span class="total-rating">(12)</span>
+                                    </div>
+                                    <div class="shop-content-bottom">
+                                       <a href="#" class="cart add-to-cart" data-id="4" data-title="Суп том ям" data-price="529" data-calories="460" data-image="assets/img/products/home_shop_thumb04.png"><i class="flaticon-shopping-cart-1"></i></a>
+                                       <a href="#" class="btn btn-two">Купить</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- товар 5 -->
+                           <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="home-shop-item inner-shop-item" data-category="еда">
+                                 <div class="home-shop-thumb">
+                                    <img src="assets/img/products/home_shop_thumb05.png" alt="img">
+                                    <span class="discount"> -15%</span>
+                                    </a>
+                                 </div>
+                                 <div class="home-shop-content">
+                                    <h4 class="title"><a >Салат Цезарь</a></h4>
+                                    <span class="home-shop-price" data-price="450" data-calories="810">450 руб.</span>
+                                    <p class="product-calories">Калорийность: <span id="calories-5">810 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                    <div class="home-shop-rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star-half-alt"></i>
+                                       <span class="total-rating">(19)</span>
+                                    </div>
+                                    <div class="shop-content-bottom">
+                                       <a href="#" class="cart add-to-cart" data-id="5" data-title="Салат Цезарь" data-price="450" data-calories="810" data-image="assets/img/products/home_shop_thumb05.png"><i class="flaticon-shopping-cart-1"></i></a>
+                                       <a href="#" class="btn btn-two">Купить</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- товар 6 -->
+                           <div class="col-xl-4 col-lg-6 col-md-6">
+                              <div class="home-shop-item inner-shop-item" data-category="еда">
+                                 <div class="home-shop-thumb">
+                                    <img src="assets/img/products/home_shop_thumb06.png" alt="img">
+                                    </a>
+                                 </div>
+                                 <div class="home-shop-content">
+                                    <h4 class="title"><a >Паэлья</a></h4>
+                                    <span class="home-shop-price" data-price="470" data-calories="690">470 руб.</span>
+                                    <p class="product-calories">Калорийность: <span id="calories-6">690 ккал.</span></p> <!-- Добавлен элемент для отображения калорийности -->
+                                    <div class="home-shop-rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star-half-alt"></i>
+                                       <span class="total-rating">(29)</span>
+                                    </div>
+                                    <div class="shop-content-bottom">
+                                       <a href="#" class="cart add-to-cart" data-id="6" data-title="Паэлья" data-price="470" data-calories="690" data-image="assets/img/products/home_shop_thumb06.png"><i class="flaticon-shopping-cart-1"></i></a>
+                                       <a href="#" class="btn btn-two">Купить</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+<!-- shop-script -->
+ <script>
+// Массив для хранения данных о товарах в корзине
+let cart = [];
+
+// Элементы для отображения стоимости и калорийности в корзине
+const cartItemCount = document.getElementById("cart-item-count");
+const totalPriceElement = document.getElementById("total-price");
+const totalCaloriesElement = document.getElementById("total-calories");
+const cartItemsList = document.getElementById("cart-items-list");
+
+// Функция для обновления корзины
+function updateCart() {
+    cartItemCount.textContent = cart.length;
+
+    let totalPrice = 0;
+    let totalCalories = 0;
+    
+    cartItemsList.innerHTML = '';
+
+    cart.forEach(item => {
+        totalPrice += item.price * item.quantity;
+        totalCalories += item.calories * item.quantity;
+
+        const cartItem = document.createElement('li');
+        cartItem.classList.add('woocommerce-mini-cart-item', 'd-flex', 'align-items-center');
+        
+        cartItem.innerHTML = `
+            <a href="#" class="remove remove_from_cart_button" data-id="${item.id}">×</a>
+            <div class="mini-cart-img">
+                <img src="${item.image}" alt="${item.title}">
+            </div>
+            <div class="mini-cart-content">
+                <h4 class="product-title"><a href="shop-details.html">${item.title}</a></h4>
+                <div class="mini-cart-price">${item.quantity} × 
+                    <span class="woocommerce-Price-amount amount">${item.price} руб.</span>
+                </div>
+                <p class="product-calories">Калорийность: <span>${item.calories} кал.</span></p>
+            </div>
+        `;
+
+        cartItemsList.appendChild(cartItem);
+    });
+
+    totalPriceElement.textContent = `${totalPrice} руб.`;
+    totalCaloriesElement.textContent = `${totalCalories} кал.`;
+
+    // Сохраняем корзину в localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Функция для загрузки корзины из localStorage
+function loadCart() {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCart();
+    }
+}
+
+// Функция для добавления товара в корзину
+function addToCart(id, title, price, calories, image) {
+    const existingItem = cart.find(item => item.id === id);
+    
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ id, title, price, calories, image, quantity: 1 });
+    }
+
+    updateCart();
+}
+
+// Обработчик событий для добавления товара в корзину
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = button.getAttribute('data-id');
+        const title = button.getAttribute('data-title');
+        const price = parseInt(button.getAttribute('data-price'));
+        const calories = parseInt(button.getAttribute('data-calories'));
+        const image = button.getAttribute('data-image');
+
+        addToCart(id, title, price, calories, image);
+    });
+});
+
+// Функция для удаления товара из корзины
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCart();
+}
+
+// Обработчик для удаления товара из корзины
+cartItemsList.addEventListener('click', (e) => {
+    if (e.target && e.target.classList.contains('remove_from_cart_button')) {
+        const id = e.target.getAttribute('data-id');
+        removeFromCart(id);
+    }
+});
+
+// Загружаем корзину при загрузке страницы
+loadCart();
+
+
+ </script>
+
+
+      </main>
+      <!-- main-area-end -->
+      <!-- Footer-area -->
+      <footer class="footer-area not-show-instagram">
+         <div class="footer-top-wrap">
+            <div class="container">
+               <div class="footer-widgets-wrap">
+                  <div class="row">
+                     <div class="col-lg-4 col-md-7">
+                        <div class="footer-widget">
+                           <div class="footer-about">
+                              <div class="footer-logo logo">
+                                 <a href="index.html"><img src="assets/img/logo/white_logo.png" alt="Logo"></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-5 col-sm-6">
+                        <div class="footer-widget">
+                           <h4 class="fw-title">О нас</h4>
+                           <ul class="list-wrap">
+                              <li><a href="#">О компании</a></li>
+                              <li><a href="shop.html">Наш магазин</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-5">
+                        <div class="footer-widget">
+                           <h4 class="fw-title">Контакты</h4>
+                           <div class="footer-contact-wrap">
+                              <p>Бирюлево Восточное, Москва</p>
+                              <ul class="list-wrap">
+                                 <li class="phone"><i class="fas fa-phone"></i>+7 999 999 99-99</li>
+                                 <li class="mail"><i class="fas fa-envelope"></i> Infinity@mail.com</li>
+                                 <li class="website"><i class="fas fa-globe"></i> www.infinitymain.com</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-shape one">
+               <img src="assets/img/others/footer_shape01.png" alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+            </div>
+            <div class="footer-shape two">
+               <img src="assets/img/others/footer_shape02.png" alt="img" class="wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+            </div>
+         </div>
+         <div class="copyright-wrap">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-md-7">
+                     <div class="copyright-text">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer-area-end -->
+      <!-- JS here -->
+      <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/isotope.pkgd.min.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="assets/js/jquery.paroller.min.js"></script>
+      <script src="assets/js/jquery.easypiechart.min.js"></script>
+      <script src="assets/js/jquery.inview.min.js"></script>
+      <script src="assets/js/jquery.easing.js"></script>
+      <script src="assets/js/jquery-ui.min.js"></script>
+      <script src="assets/js/jarallax.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/validator.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/wow.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+    const filterCategory = document.getElementById("filter-category");
+    const filterPrice = document.getElementById("filter-price");
+    const filterCalories = document.getElementById("filter-calories");
+    const items = document.querySelectorAll(".home-shop-item");
+
+    function filterProducts() {
+        const selectedCategory = filterCategory.value;
+        const maxPrice = parseInt(filterPrice.value, 10) || Infinity;
+        const maxCalories = parseInt(filterCalories.value, 10) || Infinity;
+
+        items.forEach(item => {
+            const itemCategory = item.getAttribute("data-category");
+            const itemPrice = parseInt(item.querySelector(".home-shop-price").dataset.price, 10);
+            const itemCalories = parseInt(item.querySelector(".home-shop-price").dataset.calories, 10);
+
+            const categoryMatch = selectedCategory === "all" || itemCategory === selectedCategory;
+            const priceMatch = itemPrice <= maxPrice;
+            const caloriesMatch = itemCalories <= maxCalories;
+
+            if (categoryMatch && priceMatch && caloriesMatch) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+    filterCategory.addEventListener("change", filterProducts);
+    filterPrice.addEventListener("input", filterProducts);
+    filterCalories.addEventListener("input", filterProducts);
+});
+
+      </script>
+   </body>
+</html>
