@@ -12,12 +12,20 @@
   // VALIDATOR CLASS DEFINITION
   // ==========================
 
+  /**
+   * Получение значения элемента формы
+   * Обрабатывает различные типы input (checkbox, radio, text)
+   */
   function getValue($el) {
     return $el.is('[type="checkbox"]') ? $el.prop('checked')                                     :
            $el.is('[type="radio"]')    ? !!$('[name="' + $el.attr('name') + '"]:checked').length :
                                          $el.val()
   }
 
+  /**
+   * Основной класс валидатора
+   * Инициализирует валидацию формы и обработчики событий
+   */
   var Validator = function (element, options) {
     this.options    = options
     this.validators = $.extend({}, Validator.VALIDATORS, options.custom)
@@ -28,10 +36,12 @@
 
     this.update()
 
+    // Обработчики событий для валидации
     this.$element.on('input.bs.validator change.bs.validator focusout.bs.validator', $.proxy(this.onInput, this))
     this.$element.on('submit.bs.validator', $.proxy(this.onSubmit, this))
     this.$element.on('reset.bs.validator', $.proxy(this.reset, this))
 
+    // Обработка полей с data-match атрибутом
     this.$element.find('[data-match]').each(function () {
       var $this  = $(this)
       var target = $this.data('match')
@@ -43,44 +53,49 @@
 
     this.$inputs.filter(function () { return getValue($(this)) }).trigger('focusout')
 
-    this.$element.attr('novalidate', true) // disable automatic native validation
+    this.$element.attr('novalidate', true) // отключаем нативную валидацию
     this.toggleSubmit()
   }
 
+  // Версия валидатора
   Validator.VERSION = '0.11.5'
 
+  // Селектор для всех input элементов кроме скрытых и кнопок
   Validator.INPUT_SELECTOR = ':input:not([type="hidden"], [type="submit"], [type="reset"], button)'
 
+  // Отступ для фокуса при ошибке
   Validator.FOCUS_OFFSET = 20
 
+  // Настройки по умолчанию
   Validator.DEFAULTS = {
-    delay: 500,
-    html: false,
-    disable: true,
-    focus: true,
-    custom: {},
-    errors: {
+    delay: 500,           // Задержка перед валидацией
+    html: false,          // Разрешить HTML в сообщениях об ошибках
+    disable: true,        // Отключать кнопку отправки при ошибках
+    focus: true,          // Фокусироваться на первом поле с ошибкой
+    custom: {},           // Пользовательские валидаторы
+    errors: {             // Сообщения об ошибках по умолчанию
       match: 'Does not match',
       minlength: 'Not long enough'
     },
-    feedback: {
+    feedback: {           // Классы для иконок обратной связи
       success: 'glyphicon-ok',
       error: 'glyphicon-remove'
     }
   }
 
+  // Встроенные валидаторы
   Validator.VALIDATORS = {
-    'native': function ($el) {
+    'native': function ($el) {  // Нативная HTML5 валидация
       var el = $el[0]
       if (el.checkValidity) {
         return !el.checkValidity() && !el.validity.valid && (el.validationMessage || "error!")
       }
     },
-    'match': function ($el) {
+    'match': function ($el) {   // Проверка совпадения значений
       var target = $el.data('match')
       return $el.val() !== $(target).val() && Validator.DEFAULTS.errors.match
     },
-    'minlength': function ($el) {
+    'minlength': function ($el) { // Проверка минимальной длины
       var minlength = $el.data('minlength')
       return $el.val().length < minlength && Validator.DEFAULTS.errors.minlength
     }

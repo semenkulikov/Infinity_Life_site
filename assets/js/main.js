@@ -1,9 +1,17 @@
+/**
+ * Основной JavaScript файл для сайта Infinity Life
+ * Содержит все основные функции и обработчики событий
+ */
+
 (function ($) {
 	"use strict";
 
 /*=============================================
 	=    		 Preloader			      =
 =============================================*/
+/**
+ * Функция прелоадера - скрывает анимацию загрузки
+ */
 function preloader() {
 	$('#preloader').delay(0).fadeOut();
 };
@@ -11,6 +19,9 @@ function preloader() {
 /*=============================================
 	=          Windows OnLoad               =
 =============================================*/
+/**
+ * Инициализация при загрузке страницы
+ */
 $(window).on('load', function () {
 	preloader();
 	mainSlider();
@@ -21,6 +32,10 @@ $(window).on('load', function () {
 /*=============================================
 	=          One page Menu               =
 =============================================*/
+/**
+ * Настройка одностраничного меню
+ * Обработка прокрутки и подсветки активного пункта
+ */
 var scrollLink = $('.section-link');
 // Active link switching
 $(window).scroll(function () {
@@ -56,6 +71,10 @@ $(function () {
 /*=============================================
 	=    		Mobile Menu			      =
 =============================================*/
+/**
+ * Настройка мобильного меню
+ * Обработка выпадающих списков и переключения видимости
+ */
 //SubMenu Dropdown Toggle
 if ($('.menu-area li.menu-item-has-children ul').length) {
 	$('.menu-area .navigation li.menu-item-has-children').append('<div class="dropdown-btn"><span class="fas fa-angle-down"></span></div>');
@@ -113,6 +132,9 @@ $("[data-bg-color]").each(function () {
 /*=============================================
 	=            Header Search            =
 =============================================*/
+/**
+ * Настройка поиска в шапке сайта
+ */
 $(".header-search > a").on('click', function () {
 	$(".search-popup-wrap").slideToggle();
 	$('body').addClass('search-visible');
@@ -128,6 +150,9 @@ $(".search-backdrop").on('click', function () {
 /*=============================================
 	=     Menu sticky & Scroll to top      =
 =============================================*/
+/**
+ * Фиксация меню при прокрутке и кнопка "наверх"
+ */
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
 	if (scroll < 245) {
@@ -148,6 +173,9 @@ $(window).on('scroll', function () {
 /*=============================================
 	=    		 Scroll Up  	         =
 =============================================*/
+/**
+ * Плавная прокрутка к началу страницы
+ */
 if ($('.scroll-to-target').length) {
   $(".scroll-to-target").on('click', function () {
     var target = $(this).attr('data-target');
@@ -163,6 +191,9 @@ if ($('.scroll-to-target').length) {
 /*=============================================
 	=          OffCanvas Active            =
 =============================================*/
+/**
+ * Настройка бокового меню
+ */
 $('.navSidebar-button').on('click', function () {
 	$('body').addClass('offcanvas-menu-visible');
 	return false;
@@ -176,6 +207,9 @@ $('.offCanvas-overlay, .offCanvas-toggle').on('click', function () {
 /*=============================================
 	=    		 Main Slider		      =
 =============================================*/
+/**
+ * Настройка главного слайдера
+ */
 function mainSlider() {
 	var BasicSlider = $('.slider-active');
 	BasicSlider.on('init', function (e, slick) {
@@ -218,6 +252,9 @@ function mainSlider() {
 /*=============================================
 	=    		Brand Active		      =
 =============================================*/
+/**
+ * Настройка слайдера брендов
+ */
 $('.brand-active').slick({
 	dots: false,
 	infinite: true,
@@ -557,6 +594,9 @@ $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#sli
 /*=============================================
 	=          easyPieChart Active          =
 =============================================*/
+/**
+ * Настройка круговых диаграмм
+ */
 function easyPieChart() {
 	$('.fact-item').on('inview', function (event, isInView) {
 		if (isInView) {
@@ -627,12 +667,15 @@ $('.product-license li').on('click', function (event) {
 /*=============================================
 	=    		 Wow Active  	         =
 =============================================*/
+/**
+ * Инициализация анимаций WOW.js
+ */
 function wowAnimation() {
 	var wow = new WOW({
 		boxClass: 'wow',
 		animateClass: 'animated',
 		offset: 0,
-		mobile: false,
+		mobile: true,
 		live: true
 	});
 	wow.init();
