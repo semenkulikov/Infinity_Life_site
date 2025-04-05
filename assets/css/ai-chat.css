@@ -1,70 +1,111 @@
-/* Контейнер виджета */
+/* ================================
+   Виджет ИИ‑помощник по чаю
+   ================================ */
+
+/* 1. Контейнер виджета */
 #ai-chat-container {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
+  margin-top: 20px;          /* отступ от фильтров */
+  width: 100%;
+  max-width: 360px;          /* можно подкорректировать под вашу колонку */
+  box-sizing: border-box;
+  padding: 20px 20px 30px;
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-/* Заголовок виджета */
+/* 2. Заголовок */
 #ai-chat-container h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 28px;
   color: #222;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
 }
 
-/* Окно для вывода переписки */
+/* 3. Окно переписки */
 #chat-window {
-  height: 250px;
+  height: 300px;             /* больше места под сообщения */
   overflow-y: auto;
   border: 1px solid #ddd;
-  padding: 15px;
   background: #f7f7f7;
+  padding: 15px;
   border-radius: 5px;
   margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
-/* Сообщения чата */
+/* 4. Сообщения */
 .chat-message {
+  display: block;            /* занимают всю доступную ширину */
+  max-width: 80%;            /* но не растягиваются через край */
   margin-bottom: 10px;
   padding: 10px 15px;
   border-radius: 4px;
   font-size: 16px;
   line-height: 1.4;
+  word-break: break-word;
+  box-sizing: border-box;
 }
-
-/* Сообщение пользователя */
 .user-message {
   background-color: #e6f7ff;
-  text-align: right;
+  margin-left: auto;         /* выравнивание вправо */
+  text-align: left;          /* текст внутри — слева */
 }
-
-/* Сообщение ИИ */
 .ai-message {
   background-color: #fff7e6;
+  margin-right: auto;        /* выравнивание влево */
   text-align: left;
 }
-
-/* Сообщение об ошибке */
 .error-message {
   background-color: #ffe6e6;
-  text-align: left;
   color: #d8000c;
+  margin-right: auto;
+  text-align: left;
 }
 
-/* Форма ввода и кнопка */
+/* 5. Форма ввода */
 #chat-form {
   display: flex;
-  align-items: center;
+  align-items: stretch;      /* input и кнопка одной высоты */
   gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
+/* 6. Поле ввода */
 #chat-input {
-  flex-grow: 1;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 50px;
+  flex: 1;
+  min-width: 0;              /* важно, чтобы flex-элемент мог ужиматься */
+  height: 44px;
+  padding: 0 15px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+/* 7. Кнопка «Отправить» */
+.chat-send-button {
+  height: 44px;              /* совпадает с высотой инпута */
+  padding: 0 20px !important;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 22px !important;
+  flex-shrink: 0;            /* не ужимается ниже заданной ширины */
+  background-color: #0D9B4D !important;
+  color: #fff !important;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+}
+
+/* 8. Убираем агрессивный псевдо‑фон глобального .btn */
+.chat-send-button::before {
+  display: none !important;
+}
+
+/* 9. Hover‑эффект */
+.chat-send-button:hover {
+  background-color: #0b7a3d !important;
 }
